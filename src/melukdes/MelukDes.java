@@ -130,6 +130,8 @@ public class MelukDes {
                     if (mapaRegistros.containsKey(s)) {
                         aux[i - 1] += mapaRegistros.get(s);
                     }
+                }else{
+                    aux[i-1]+=mapaRegistros.get(s);
                 }
             }
             if (everything[i].equals(".DATA")) {
