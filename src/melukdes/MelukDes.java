@@ -49,17 +49,16 @@ public class MelukDes {
      */
     public static void imprimirArregloString(String[] txt) {
 
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < txt.length; i++) {
 
-            for (int j = 0; j < 16; j++) {
-                if (txt[i].equals("")) {
-                    System.out.print("x\"00\",");
-                } else {
-                    System.out.print("x\"" + txt[i] + "\",");
-                }
+            if (txt[i].equals("")) {
+                System.out.print("x\"00\",");
+            } else {
+                System.out.print("x\"" + txt[i] + "\",");
             }
-            System.out.println("");
-
+            if (i % 15 == 0 && i != 0) {
+                System.out.println("");
+            }
         }
     }
 
@@ -69,10 +68,6 @@ public class MelukDes {
         HashMap<String, String> mapaRegistros = new HashMap<>();
 
         String[] everything = MelukDes.lecturaString(MelukDes.leerTxt());
-
-        for (int i = 0; i < everything.length; i++) {
-
-        }
 
         mapaComandos.put("NOP", "0");
         mapaComandos.put("LDI", "1");
@@ -105,6 +100,7 @@ public class MelukDes {
         mapaRegistros.put("R3R1", "D");
         mapaRegistros.put("R3R2", "E");
         mapaRegistros.put("R3R3", "F");
+
         mapaRegistros.put("R0", "0");
         mapaRegistros.put("R1", "4");
         mapaRegistros.put("R2", "8");
