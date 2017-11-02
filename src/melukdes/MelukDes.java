@@ -114,7 +114,22 @@ public class MelukDes {
         while (true) {
             String s = everything[i];
             if (mapaComandos.containsKey(s)) {
-                aux[i]+=mapaComandos.get(s);
+                aux[i] += mapaComandos.get(s);
+            }
+            if (everything[i].equals(".DATA")) {
+                break;
+            }
+            i++;
+        }
+        while (true) {
+            String s = everything[i];
+            if(s.equals("R0")||s.equals("R1")||s.equals("R2")||s.equals("R3")){
+                if(everything[i+1].equals("R0")||everything[i+1].equals("R1")||everything[i+1].equals("R2")||everything[i+1].equals("R3")){
+                    s=s+everything[i+1];
+                }
+            }
+            if (mapaRegistros.containsKey(s)) {
+                aux[i] += mapaRegistros.get(s);
             }
             if (everything[i].equals(".DATA")) {
                 break;
