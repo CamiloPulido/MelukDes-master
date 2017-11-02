@@ -28,6 +28,7 @@ public class MelukDes {
         String[] result = arregloPalabras.split("\\s+");
         return result;
     }
+
     /*
      public static void leer(String arregloPalabras) {
      String[] dividido = arregloPalabras.split("\\s+");
@@ -46,7 +47,6 @@ public class MelukDes {
      }
      }
      */
-
     public static void imprimirArregloString(String[] txt) {
         for (int i = 0; i < txt.length; i++) {
             if (i == 0) {
@@ -63,6 +63,13 @@ public class MelukDes {
 
         HashMap<String, String> mapaComandos = new HashMap<>();
         HashMap<String, String> mapaRegistros = new HashMap<>();
+
+        String[] everything = MelukDes.lecturaString(MelukDes.leerTxt());
+
+        for (int i = 0; i < everything.length; i++) {
+
+        }
+
         mapaComandos.put("NOP", "0");
         mapaComandos.put("LDI", "1");
         mapaComandos.put("LD", "2");
@@ -79,14 +86,17 @@ public class MelukDes {
         mapaRegistros.put("R0R1", "1");
         mapaRegistros.put("R0R2", "2");
         mapaRegistros.put("R0R3", "3");
+
         mapaRegistros.put("R1R0", "4");
         mapaRegistros.put("R1R1", "5");
         mapaRegistros.put("R1R2", "6");
         mapaRegistros.put("R1R3", "7");
+
         mapaRegistros.put("R2R0", "8");
         mapaRegistros.put("R2R1", "9");
         mapaRegistros.put("R2R2", "A");
         mapaRegistros.put("R2R3", "B");
+
         mapaRegistros.put("R3R0", "C");
         mapaRegistros.put("R3R1", "D");
         mapaRegistros.put("R3R2", "E");
