@@ -59,7 +59,7 @@ public class MelukDes {
             if (i % 15 == 0 && i != 0) {
                 System.out.println("");
             }
-            if (txt[i].equals(".DATA")) {
+            if (i + 1 < txt.length && txt[i + 1].equals(".DATA")) {
                 break;
             }
         }
@@ -138,12 +138,19 @@ public class MelukDes {
                     if (mapaRegistros.containsKey(s)) {
                         aux[i - 1] += mapaRegistros.get(s);
                     }
-                } else if (everything[i + 1].startsWith("0")) {
+                } else {
+                    aux[i - 1] += mapaRegistros.get(s);
+                }
+
+                if (everything[i + 1].startsWith("0")) {
 
                     aux[i] += everything[i + 1].substring(2);
                     i++;
-                } else {
-                    aux[i - 1] += mapaRegistros.get(s);
+                }
+                if (everything[i + 1].length() == 1) {
+
+                    aux[i] += everything[i + 1];
+                    i++;
                 }
             }
             if (everything[i].equals(".DATA")) {
