@@ -64,6 +64,24 @@ public class MelukDes {
             }
         }
     }
+    
+        public static void imprimirArregloProvisional(String[] txt) {
+
+        for (int i = 1; i < txt.length; i++) {
+
+            if (txt[i].equals("")) {
+                System.out.print("00,");
+            } else {
+                System.out.print(txt[i] + " ,");
+            }
+            if (i % 15 == 0 && i != 0) {
+                System.out.println("");
+            }
+            if (i + 1 < txt.length && txt[i + 1].equals(".DATA")) {
+                break;
+            }
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -160,7 +178,7 @@ public class MelukDes {
         }
         //imprimirArregloString(aux);
         // CAMBIO RE MARICA ACA
-        imprimirArregloString(aux);
+        imprimirArregloProvisional(aux);
 
     }
 }
