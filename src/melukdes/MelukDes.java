@@ -74,16 +74,23 @@ public class MelukDes {
         mapaComandos.put("JMP", "8");
         mapaComandos.put("JZ", "9");
         mapaComandos.put("JN", "A");
-        
-        mapaRegistros.put("R0R0", "");
-        mapaRegistros.put("R0R0", "");
-        mapaRegistros.put("R0R0", "");
-        mapaRegistros.put("R0R0", "");
-        mapaRegistros.put("R0R0", "");
-        mapaRegistros.put("R0R0", "");
-        mapaRegistros.put("R0R0", "");
-        mapaRegistros.put("R0R0", "");
-        mapaRegistros.put("R0R0", "");
+
+        mapaRegistros.put("R0R0", "0");
+        mapaRegistros.put("R0R1", "1");
+        mapaRegistros.put("R0R2", "2");
+        mapaRegistros.put("R0R3", "3");
+        mapaRegistros.put("R1R0", "4");
+        mapaRegistros.put("R1R1", "5");
+        mapaRegistros.put("R1R2", "6");
+        mapaRegistros.put("R1R3", "7");
+        mapaRegistros.put("R2R0", "8");
+        mapaRegistros.put("R2R1", "9");
+        mapaRegistros.put("R2R2", "A");
+        mapaRegistros.put("R2R3", "B");
+        mapaRegistros.put("R3R0", "C");
+        mapaRegistros.put("R3R1", "D");
+        mapaRegistros.put("R3R2", "E");
+        mapaRegistros.put("R3R3", "F");
 
         String[] txt = lecturaString(leerTxt());
         imprimirArregloString(txt);
