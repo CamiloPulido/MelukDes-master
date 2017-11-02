@@ -62,6 +62,7 @@ public class MelukDes {
     public static void main(String[] args) {
 
         HashMap<String, String> mapaComandos = new HashMap<>();
+        HashMap<String, String> mapaRegistros = new HashMap<>();
         mapaComandos.put("NOP", "0");
         mapaComandos.put("LDI", "1");
         mapaComandos.put("LD", "2");
@@ -73,6 +74,16 @@ public class MelukDes {
         mapaComandos.put("JMP", "8");
         mapaComandos.put("JZ", "9");
         mapaComandos.put("JN", "A");
+        
+        mapaRegistros.put("R0R0", "");
+        mapaRegistros.put("R0R0", "");
+        mapaRegistros.put("R0R0", "");
+        mapaRegistros.put("R0R0", "");
+        mapaRegistros.put("R0R0", "");
+        mapaRegistros.put("R0R0", "");
+        mapaRegistros.put("R0R0", "");
+        mapaRegistros.put("R0R0", "");
+        mapaRegistros.put("R0R0", "");
 
         String[] txt = lecturaString(leerTxt());
         imprimirArregloString(txt);
