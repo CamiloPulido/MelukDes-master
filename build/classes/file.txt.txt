@@ -1,0 +1,40 @@
+prueba de que esto intenta funcionar
+.code				
+	Loop1	Ldi	R0	Y
+		ld	R1	R0
+		Ldi	R0	0x00
+		sub	R1	R0
+		ldi	R0	Endloop1
+		jn	R0	
+		jz	R0	
+		ldi	R0	P
+		ld	R1	R0
+		ldi	R0	X
+		Ld	R2	R0
+		add	R1	R2
+		ldi	R0	p
+		st	R1	R0
+		ldi	R0	Y
+		ld	R1	R0
+		ldi	R2	0x01
+		sub	R1	R2
+		st	R1	R0
+		ldi	R0	Loop1
+		jmp	R0	
+	Endloop1	Ldi	R0	0xfd
+		ldi	R1	0x01
+		st	R1	R0
+		ldi	R0	0xfe
+		ldi	R1	p
+		ld	R1	R1
+		st	R1	R0
+		Ldi	R0	0xfd
+		ldi	R1	0x02
+		st	R1	R0
+	Loop2	ldi	R0	Loop2
+		jmp	R0	
+				
+.data				
+	X:	0x05		
+	Y:	0x03		
+	P:	0x00		
