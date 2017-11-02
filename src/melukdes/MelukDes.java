@@ -49,7 +49,7 @@ public class MelukDes {
      */
     public static void imprimirArregloString(String[] txt) {
 
-        for (int i = 0; i < txt.length; i++) {
+        for (int i = 1; i < txt.length; i++) {
 
             if (txt[i].equals("")) {
                 System.out.print("x\"00\",");
@@ -58,6 +58,9 @@ public class MelukDes {
             }
             if (i % 15 == 0 && i != 0) {
                 System.out.println("");
+            }
+            if(txt[i+1].equals(".DATA")){
+                break;
             }
         }
     }
@@ -107,10 +110,10 @@ public class MelukDes {
         mapaRegistros.put("R3", "C");
 
         String[] aux = new String[everything.length];
-        for (int i = 0; i < aux.length; i++) {
+        for (int i = 1; i < aux.length; i++) {
             aux[i] = "";
         }
-        int i = 0;
+        int i = 1;
         while (true) {
             String s = everything[i];
             if (mapaComandos.containsKey(s)) {
@@ -121,7 +124,7 @@ public class MelukDes {
             }
             i++;
         }
-        i = 0;
+        i = 1;
         while (true) {
             String s = everything[i];
             if (s.equals("R0") || s.equals("R1") || s.equals("R2") || s.equals("R3")) {
@@ -139,7 +142,8 @@ public class MelukDes {
             }
             i++;
         }
-        imprimirArregloString(aux);
+        //imprimirArregloString(aux);
+        imprimirArregloString(everything);
 
     }
 }
