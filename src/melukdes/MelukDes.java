@@ -48,14 +48,20 @@ public class MelukDes {
      }
      */
     public static void imprimirArregloString(String[] txt) {
+        int j=1;
         for (int i = 0; i < txt.length; i++) {
-            if (i == 0) {
-                System.out.print("[" + txt[i] + ", ");
-            } else if (i == txt.length - 1) {
-                System.out.println(txt[i] + "]");
-            } else {
-                System.out.print(txt[i] + ", ");
+            if(txt[i].equals("")){
+                System.out.print("x\"00\",");
             }
+            System.out.print("x\"" + txt[i] + "\",");
+            if (i == txt.length - 1) {
+                System.out.print("x\"" + txt[i] + "\"");
+            }
+            if (j==16) {
+                System.out.println("");
+                j=0;
+            }
+            j++;
         }
     }
 
@@ -128,7 +134,7 @@ public class MelukDes {
                 if (everything[i + 1].equals("R0") || everything[i + 1].equals("R1") || everything[i + 1].equals("R2") || everything[i + 1].equals("R3")) {
                     s = s + everything[i + 1];
                     if (mapaRegistros.containsKey(s)) {
-                        aux[i-1] += mapaRegistros.get(s);
+                        aux[i - 1] += mapaRegistros.get(s);
                     }
                 }
             }
