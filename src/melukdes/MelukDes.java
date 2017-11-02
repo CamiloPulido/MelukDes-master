@@ -48,20 +48,18 @@ public class MelukDes {
      }
      */
     public static void imprimirArregloString(String[] txt) {
-        int j=1;
-        for (int i = 0; i < txt.length; i++) {
-            if(txt[i].equals("")){
-                System.out.print("x\"00\",");
+
+        for (int i = 0; i < 16; i++) {
+
+            for (int j = 0; j < 16; j++) {
+                if (txt[i].equals("")) {
+                    System.out.print("x\"00\",");
+                } else {
+                    System.out.print("x\"" + txt[i] + "\",");
+                }
             }
-            System.out.print("x\"" + txt[i] + "\",");
-            if (i == txt.length - 1) {
-                System.out.print("x\"" + txt[i] + "\"");
-            }
-            if (j==16) {
-                System.out.println("");
-                j=0;
-            }
-            j++;
+            System.out.println("");
+
         }
     }
 
