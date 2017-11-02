@@ -91,8 +91,14 @@ public class MelukDes {
         mapaRegistros.put("R3R1", "D");
         mapaRegistros.put("R3R2", "E");
         mapaRegistros.put("R3R3", "F");
-
+        mapaRegistros.put("R0","0");
+        mapaRegistros.put("R1","4");
+        mapaRegistros.put("R2","8");
+        mapaRegistros.put("R3","C");
+        
         String[] txt = lecturaString(leerTxt());
+        
+        
         imprimirArregloString(txt);
     }
 }
